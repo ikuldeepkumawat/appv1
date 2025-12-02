@@ -1,0 +1,65 @@
+{
+  "include": [
+    "env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".react-router/types/**/*",
+    "app/**/*",
+    "server.ts"
+  ],
+  "compilerOptions": {
+    // Library support
+    "lib": ["DOM", "DOM.Iterable", "ES2022", "WebWorker"],
+    
+    // Type checking
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    // Output
+    "noEmit": true,
+    "removeComments": false,
+    
+    // JavaScript support
+    "allowJs": true,
+    "resolveJsonModule": true,
+    
+    // JSX
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    
+    // Module resolution
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ES2022",
+    
+    // Paths
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"]
+    },
+    
+    // Types - Cloudflare Workers के लिए updated
+    "types": [
+      "@react-router/node",
+      "@react-router/cloudflare",
+      "@cloudflare/workers-types",
+      "vite/client",
+      "@shopify/polaris-types"
+    ],
+    
+    // Root directories
+    "rootDirs": [".", "./.react-router/types"]
+  },
+  
+  // Exclude unnecessary files
+  "exclude": [
+    "node_modules",
+    "build",
+    ".wrangler",
+    "dist"
+  ]
+}

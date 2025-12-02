@@ -1,0 +1,16 @@
+name = "my-shopify-app"
+main = "build/server/index.js"
+compatibility_date = "2024-12-01"
+
+[site]
+bucket = "build/client"
+
+[[kv_namespaces]]
+binding = "SESSION_STORAGE"
+id = "9154ec3eafde423ba523b507b8deb1cc"
+preview_id = "a6cd82e5300548c9ab6cb1b49a10a66a"
+
+[vars]
+SHOPIFY_API_KEY = "cd8a1875ec2a3ee20b9a26f77d1100f9"
+SCOPES = "write_products,read_orders"
+SHOPIFY_APP_URL = "quickstart-40d2c10b.myshopify.com"
